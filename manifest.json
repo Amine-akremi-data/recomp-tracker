@@ -1,15 +1,15 @@
 {
-  "name": "Recomp Tracker — أمين",
+  "name": "Recomp Tracker — Amine",
   "short_name": "Recomp",
-  "description": "تتبع التمرين والوزن والقياسات — خطة أمين",
+  "description": "Workout, weight, and measurement tracker — Amine's plan",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#f6f3ec",
   "theme_color": "#1c2321",
-  "lang": "ar",
-  "dir": "rtl",
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
       "src": "icon-192.png",

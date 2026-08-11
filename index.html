@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خطة أمين — Recomp Tracker</title>
+<title>Amine's Plan — Recomp Tracker</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1c2321">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
 :root{
   --ink:#1c2321; --paper:#f6f3ec; --ember:#c04a2e; --ember-soft:#e8c4b8;
   --iron:#4a5a52; --iron-soft:#dbe2dd; --line:#d8d2c4; --good:#3f6b4f;
   --good-soft:#c8ddd0; --card:#fffdf8; --warn:#d4882a;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--paper);color:var(--ink);font-family:'Tajawal',sans-serif;padding-bottom:80px;}
+body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;padding-bottom:80px;}
 .wrap{max-width:680px;margin:0 auto;padding:0 16px;}
 
 /* HEADER */
@@ -62,10 +62,10 @@ section.active{display:block;}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;}
 .card-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;border-bottom:2px solid var(--ink);padding-bottom:8px;}
 .card-title{font-size:16px;font-weight:900;}
-.card-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ember);text-align:left;}
+.card-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ember);text-align:right;}
 .card ul{list-style:none;}
-.card li{font-size:13.5px;padding:5px 0;padding-right:14px;position:relative;color:#3a423e;line-height:1.5;}
-.card li::before{content:"—";position:absolute;right:0;color:var(--ember);}
+.card li{font-size:13.5px;padding:5px 0;padding-left:14px;position:relative;color:#3a423e;line-height:1.5;}
+.card li::before{content:"—";position:absolute;left:0;color:var(--ember);}
 .alt-toggle{margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--iron);cursor:pointer;display:inline-block;border-bottom:1px dashed var(--iron);}
 .alts{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);}
 .alts.show{display:block;}
@@ -78,7 +78,7 @@ section.active{display:block;}
 .total-nums{display:flex;justify-content:center;gap:28px;margin-top:8px;}
 .total-nums div span{display:block;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--ember-soft);}
 .total-nums div small{font-size:10px;color:#a8a196;}
-.note-box{background:var(--iron-soft);border-right:3px solid var(--good);border-radius:8px;padding:11px 13px;font-size:13px;margin-top:10px;line-height:1.6;}
+.note-box{background:var(--iron-soft);border-left:3px solid var(--good);border-radius:8px;padding:11px 13px;font-size:13px;margin-top:10px;line-height:1.6;}
 
 /* WORKOUT */
 .day-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px;}
@@ -96,7 +96,7 @@ section.active{display:block;}
 .ex-log-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
 .ex-log-row input{width:70px;padding:6px 8px;border-radius:7px;border:1.5px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:12px;background:#fff;}
 .ex-log-row select{padding:6px 8px;border-radius:7px;border:1.5px solid var(--line);font-size:12px;background:#fff;color:var(--ink);}
-.ex-log-row button{padding:6px 12px;font-size:12px;border-radius:7px;background:var(--ember);color:#fff;border:none;cursor:pointer;font-family:'Tajawal',sans-serif;font-weight:700;}
+.ex-log-row button{padding:6px 12px;font-size:12px;border-radius:7px;background:var(--ember);color:#fff;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-weight:700;}
 .ex-pb{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--iron);margin-top:4px;}
 .ex-pb .pb-val{color:var(--good);font-weight:700;}
 .deload-box{background:#fff8e1;border:1px solid var(--warn);border-radius:10px;padding:12px 14px;margin-top:8px;font-size:13px;line-height:1.6;}
@@ -110,7 +110,7 @@ section.active{display:block;}
 .ri .ri-txt{font-size:12px;color:var(--iron);}
 
 /* FREQ TABLE */
-.freq-note{background:var(--iron-soft);border-right:3px solid var(--good);border-radius:8px;padding:11px 13px;font-size:13px;margin-bottom:12px;line-height:1.6;}
+.freq-note{background:var(--iron-soft);border-left:3px solid var(--good);border-radius:8px;padding:11px 13px;font-size:13px;margin-bottom:12px;line-height:1.6;}
 .freq-table{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:6px;}
 .ft-title{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--iron);margin-bottom:8px;text-transform:uppercase;}
 .ft-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:13px;}
@@ -125,15 +125,15 @@ section.active{display:block;}
 .log-card h3{font-size:14px;font-weight:900;margin-bottom:10px;}
 .log-row{display:flex;gap:7px;margin-bottom:9px;flex-wrap:wrap;}
 .log-row input,.log-row select{flex:1;min-width:100px;padding:9px 10px;border-radius:9px;border:1.5px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:13px;background:#fff;color:var(--ink);}
-.log-row button{font-family:'Tajawal',sans-serif;font-weight:700;font-size:13px;border:none;border-radius:9px;padding:9px 16px;background:var(--ember);color:#fff;cursor:pointer;}
+.log-row button{font-family:'Inter',sans-serif;font-weight:700;font-size:13px;border:none;border-radius:9px;padding:9px 16px;background:var(--ember);color:#fff;cursor:pointer;}
 .entries{margin-top:4px;}
 .entry{display:flex;justify-content:space-between;padding:8px 4px;border-bottom:1px solid var(--line);font-size:13px;}
 .entry .d{font-family:'JetBrains Mono',monospace;color:var(--iron);font-size:12px;}
 .entry .w{font-weight:700;font-family:'JetBrains Mono',monospace;}
-.diff{font-size:11px;margin-right:5px;}
+.diff{font-size:11px;margin-left:5px;}
 .diff.down{color:var(--good);} .diff.up{color:var(--ember);}
 .empty{text-align:center;padding:20px 10px;color:var(--iron);font-size:13px;}
-.section-title{font-size:16px;font-weight:900;margin:18px 0 10px;padding-right:4px;border-right:3px solid var(--ember);padding-right:10px;}
+.section-title{font-size:16px;font-weight:900;margin:18px 0 10px;padding-left:10px;border-left:3px solid var(--ember);}
 
 /* MEASUREMENTS */
 .meas-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
@@ -144,6 +144,13 @@ section.active{display:block;}
 .meas-hist-row:last-child{border-bottom:none;}
 .meas-hist-row .mhd{font-family:'JetBrains Mono',monospace;color:var(--iron);font-size:11px;}
 
+/* BACKUP */
+.backup-row{display:flex;gap:8px;flex-wrap:wrap;}
+.backup-row button{flex:1;min-width:120px;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;border:none;border-radius:9px;padding:11px 14px;cursor:pointer;}
+.btn-export{background:var(--ink);color:var(--paper);}
+.btn-import{background:var(--iron-soft);color:var(--ink);border:1.5px solid var(--line) !important;}
+#importFile{display:none;}
+
 footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);font-family:'JetBrains Mono',monospace;}
 </style>
 </head>
@@ -152,8 +159,8 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <header>
   <div class="wrap">
     <div class="eyebrow">AMINE AK95 — RECOMP LOG v2</div>
-    <h1>خطة التغذية والتمرين</h1>
-    <div class="sub">180cm · Upper/Lower ×4 · كل عضلة 2×/أسبوع</div>
+    <h1>Nutrition & Training Plan</h1>
+    <div class="sub">180cm · Upper/Lower ×4 · Each muscle 2×/week</div>
   </div>
 </header>
 
@@ -161,12 +168,12 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <div class="goal-section">
   <div class="wrap">
     <div class="goal-grid" id="goalGrid">
-      <div class="goal-chip"><div class="gl">الوزن الحالي</div><div class="gv" id="gCurW">91.7 kg</div><div class="gs">Baseline: 03/08/2026</div></div>
-      <div class="goal-chip"><div class="gl">الوزن المستهدف</div><div class="gv">80 kg</div><div class="gs">~22-24 أسبوع</div></div>
-      <div class="goal-chip"><div class="gl">الخصر الحالي</div><div class="gv">91 cm</div><div class="gs">هدف: &lt;82 cm</div></div>
-      <div class="goal-chip"><div class="gl">أسابيع من البداية</div><div class="gv" id="gWeeks">—</div><div class="gs">بداية: 10/08/2026</div></div>
+      <div class="goal-chip"><div class="gl">Current weight</div><div class="gv" id="gCurW">91.7 kg</div><div class="gs">Baseline: 03/08/2026</div></div>
+      <div class="goal-chip"><div class="gl">Target weight</div><div class="gv">80 kg</div><div class="gs">~22-24 weeks</div></div>
+      <div class="goal-chip"><div class="gl">Current waist</div><div class="gv">91 cm</div><div class="gs">Goal: &lt;82 cm</div></div>
+      <div class="goal-chip"><div class="gl">Weeks in</div><div class="gv" id="gWeeks">—</div><div class="gs">Start: 10/08/2026</div></div>
       <div class="progress-bar-wrap">
-        <div class="pb-label">التقدم نحو هدف الوزن (91.7 → 80 kg)</div>
+        <div class="pb-label">Progress toward weight goal (91.7 → 80 kg)</div>
         <div class="pb-track"><div class="pb-fill" id="pbFill" style="width:0%"></div></div>
         <div class="pb-nums"><span id="pbStart">91.7</span><span id="pbCur">—</span><span>80.0</span></div>
       </div>
@@ -177,36 +184,36 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <!-- MACRO CALCULATOR -->
 <div class="wrap" style="padding-top:14px;">
   <div class="macro-live">
-    <h3>MACRO CALCULATOR — تقديرات، مش أرقام مطلقة</h3>
+    <h3>MACRO CALCULATOR — estimates, not absolute numbers</h3>
     <div class="macro-row">
-      <label>الوزن (kg)</label>
+      <label>Weight (kg)</label>
       <input type="number" id="calcWeight" value="91.7" step="0.1" oninput="calcMacros()">
     </div>
     <div class="macro-row">
-      <label>الهدف</label>
+      <label>Goal</label>
       <select id="calcGoal" onchange="calcMacros()">
-        <option value="recomp">Recomp (تشكيل)</option>
-        <option value="cut">Cut (تخسيس)</option>
+        <option value="recomp">Recomp</option>
+        <option value="cut">Cut</option>
         <option value="maintain">Maintenance</option>
       </select>
     </div>
     <div class="macro-results">
-      <div class="mr-chip"><div class="mrv" id="mrKcal">2245</div><div class="mrl">kcal/يوم تمرين</div></div>
-      <div class="mr-chip"><div class="mrv" id="mrProt">176</div><div class="mrl">g بروتين</div></div>
-      <div class="mr-chip"><div class="mrv" id="mrRest">2020</div><div class="mrl">kcal/يوم راحة</div></div>
+      <div class="mr-chip"><div class="mrv" id="mrKcal">2245</div><div class="mrl">kcal/training day</div></div>
+      <div class="mr-chip"><div class="mrv" id="mrProt">176</div><div class="mrl">g protein</div></div>
+      <div class="mr-chip"><div class="mrv" id="mrRest">2020</div><div class="mrl">kcal/rest day</div></div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;">
-      <div class="mr-chip"><div class="mrv" style="font-size:15px;">70-80g</div><div class="mrl">دهون (هدف يومي)</div></div>
-      <div class="mr-chip"><div class="mrv" style="font-size:15px;">30g</div><div class="mrl">ألياف (هدف يومي)</div></div>
+      <div class="mr-chip"><div class="mrv" style="font-size:15px;">70-80g</div><div class="mrl">fat (daily target)</div></div>
+      <div class="mr-chip"><div class="mrv" style="font-size:15px;">30g</div><div class="mrl">fiber (daily target)</div></div>
     </div>
   </div>
 </div>
 
 <nav class="wrap">
-  <div class="tab active" data-tab="food">🍽️ الأكل</div>
-  <div class="tab" data-tab="gym">🏋️ التمرين</div>
-  <div class="tab" data-tab="progress">📊 التقدم</div>
-  <div class="tab" data-tab="body">📏 القياسات</div>
+  <div class="tab active" data-tab="food">🍽️ Food</div>
+  <div class="tab" data-tab="gym">🏋️ Training</div>
+  <div class="tab" data-tab="progress">📊 Progress</div>
+  <div class="tab" data-tab="body">📏 Measurements</div>
 </nav>
 
 <div class="wrap">
@@ -215,141 +222,141 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <section id="food" class="active">
 
   <div class="card">
-    <div class="card-head"><div class="card-title">🥤 الإفطار — قبل التمرين</div><div class="card-meta" id="mBF">~47g | ~630 kcal</div></div>
+    <div class="card-head"><div class="card-title">🥤 Breakfast — pre-workout</div><div class="card-meta" id="mBF">~47g | ~630 kcal</div></div>
     <ul>
-      <li>21g بروتين واي (سكوب واحد) — تأكد أنه حلال أو نباتي</li>
-      <li>3g كرياتين (يومي دون انقطاع)</li>
-      <li>150g فواكه حمراء (فراولة/توت)</li>
-      <li>250ml حليب كامل الدسم</li>
-      <li>2 قطعة Weetabix (~37g)</li>
-      <li>100g Fromage blanc 0% (Envia Lidl) — 7.3g بروتين/100g</li>
-      <li>15g زبدة فول سوداني</li>
+      <li>21g whey protein (one scoop) — make sure it's halal or plant-based</li>
+      <li>3g creatine (daily, no gaps)</li>
+      <li>150g red fruit (strawberries/berries)</li>
+      <li>250ml whole milk</li>
+      <li>2 pieces Weetabix (~37g)</li>
+      <li>100g Fromage blanc 0% (Envia Lidl) — 7.3g protein/100g</li>
+      <li>15g peanut butter</li>
     </ul>
-    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ بديل: Pancakes بروتين</div>
+    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ Alternative: Protein pancakes</div>
     <div class="alts">
-      <div class="alt-item"><b>🥞 Pancakes بروتين + Fromage blanc</b>1 بيضة + 1 موزة + 55g flocons d'avoine + 1 سكوب واي + 50ml lait d'avoine — اخلط وقلي. أضف 100g Fromage blanc 0% على الجنب<span class="m">~43g بروتين | ~576 kcal | 9g ألياف</span></div>
+      <div class="alt-item"><b>🥞 Protein pancakes + Fromage blanc</b>1 egg + 1 banana + 55g oats + 1 scoop whey + 50ml oat milk — mix and cook. Add 100g Fromage blanc 0% on the side<span class="m">~43g protein | ~576 kcal | 9g fiber</span></div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-head"><div class="card-title">🍗 الغداء</div><div class="card-meta">~65g | ~780 kcal</div></div>
+    <div class="card-head"><div class="card-title">🍗 Lunch</div><div class="card-meta">~65g | ~780 kcal</div></div>
     <ul>
-      <li>240g صدر دجاج مشوي (وزن نيء، الافتراضي)</li>
-      <li>100g أرز/قمح جاف (قبل الطهي) <b>أو</b> 350g بطاطا نيئة (قبل السلق)</li>
-      <li>200g سلطة/خضروات + 10ml زيت زيتون</li>
+      <li>240g grilled chicken breast (raw weight, default)</li>
+      <li>100g dry rice/wheat (before cooking) <b>or</b> 350g raw potato (before boiling)</li>
+      <li>200g salad/vegetables + 10ml olive oil</li>
     </ul>
-    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ بدائل البروتين في الغداء (حلال — سريع التحضير)</div>
+    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ Lunch protein alternatives (halal — quick prep)</div>
     <div class="alts">
-      <div class="alt-item"><b>🐟 تونة / حوت أبيض — 240g مصفاة (معلب)</b>جاهز في دقيقة — مش محتاج طبخ<span class="m">~57g بروتين | ~270 kcal</span></div>
-      <div class="alt-item"><b>🐟 سلمون — 240g (1-2 مرة/أسبوع)</b>مشوي أو مطهو بالبخار — 8 دقائق<span class="m">~52g بروتين | ~430 kcal</span></div>
-      <div class="alt-item"><b>🥩 Steak haché bœuf halal 5% — 240g</b>Lidl/Carrefour — مشوي 5 دقائق<span class="m">~50g بروتين | ~390 kcal</span></div>
-      <div class="alt-item"><b>🍗 Escalope de dinde — 240g</b>ديك رومي — مشوي 8 دقائق، أخف من الدجاج<span class="m">~55g بروتين | ~300 kcal</span></div>
-      <div class="alt-item"><b>🍗 Blanc de poulet halal surgelé — 240g</b>مجمد جاهز للشواء — عملي للتحضير المسبق<span class="m">~55g بروتين | ~310 kcal</span></div>
-      <div class="alt-item"><b>🦐 Crevettes cuites — 200g</b>جاهزة من السوبرماركت — مش محتاج طبخ<span class="m">~38g بروتين | ~180 kcal</span></div>
-      <div class="alt-item"><b>🥚 بيض مسلوق + جبن أبيض</b>4 بيضات + 150g جبن أبيض — 5 دقائق<span class="m">~42g بروتين | ~420 kcal</span></div>
-      <div class="alt-item"><b>🐟 Sardines en boîte (huile d'olive) — 200g مصفاة</b>معلب جاهز — أوميغا-3 عالي<span class="m">~40g بروتين | ~360 kcal</span></div>
-      <div class="alt-item"><b>🍱 Eat Salad Bowl — مطعم</b>جمبري nature (مش taï) + أرز 200g + خضار مشوية + بيضة + زيت زيتون بس كصلصة. تجنب الصلصات الجاهزة (+150 kcal خفية)<span class="m">~45-50g بروتين | ~630 kcal</span></div>
+      <div class="alt-item"><b>🐟 Tuna / white tuna — 240g drained (canned)</b>Ready in a minute — no cooking needed<span class="m">~57g protein | ~270 kcal</span></div>
+      <div class="alt-item"><b>🐟 Salmon — 240g (1-2×/week)</b>Grilled or steamed — 8 minutes<span class="m">~52g protein | ~430 kcal</span></div>
+      <div class="alt-item"><b>🥩 Halal beef steak haché 5% — 240g</b>Lidl/Carrefour — grilled 5 minutes<span class="m">~50g protein | ~390 kcal</span></div>
+      <div class="alt-item"><b>🍗 Turkey escalope — 240g</b>Grilled 8 minutes, lighter than chicken<span class="m">~55g protein | ~300 kcal</span></div>
+      <div class="alt-item"><b>🍗 Frozen halal chicken breast — 240g</b>Frozen, ready to grill — practical for meal prep<span class="m">~55g protein | ~310 kcal</span></div>
+      <div class="alt-item"><b>🦐 Cooked shrimp — 200g</b>Ready-made from the supermarket — no cooking needed<span class="m">~38g protein | ~180 kcal</span></div>
+      <div class="alt-item"><b>🥚 Boiled eggs + white cheese</b>4 eggs + 150g white cheese — 5 minutes<span class="m">~42g protein | ~420 kcal</span></div>
+      <div class="alt-item"><b>🐟 Canned sardines (olive oil) — 200g drained</b>Ready-made canned — high omega-3<span class="m">~40g protein | ~360 kcal</span></div>
+      <div class="alt-item"><b>🍱 Eat Salad Bowl — restaurant</b>Plain shrimp (not Thai-style) + 200g rice + grilled veg + egg + olive oil as dressing only. Avoid pre-made sauces (+150 hidden kcal)<span class="m">~45-50g protein | ~630 kcal</span></div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-head"><div class="card-title">💪 بعد التمرين — أيام الجيم بس</div><div class="card-meta">~22g | ~225 kcal</div></div>
+    <div class="card-head"><div class="card-title">💪 Post-workout — gym days only</div><div class="card-meta">~22g | ~225 kcal</div></div>
     <ul>
-      <li>21g واي بروتين (سكوب واحد)</li>
-      <li>1 موزة متوسطة (~120g)</li>
+      <li>21g whey protein (one scoop)</li>
+      <li>1 medium banana (~120g)</li>
     </ul>
-    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ بدائل بعد التمرين (لو مش عندك شيكر)</div>
+    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ Post-workout alternatives (no shaker)</div>
     <div class="alts">
-      <div class="alt-item"><b>🥛 Skyr nature 200g + موزة</b>بروتين طبيعي بدون مسحوق — من السوبرماركت مباشرة<span class="m">~22g بروتين | ~230 kcal</span></div>
-      <div class="alt-item"><b>🥚 3 بيضات مسلوقة + موزة</b>محضّر مسبقاً — عملي جداً<span class="m">~20g بروتين | ~270 kcal</span></div>
-      <div class="alt-item"><b>🐟 تونة معلبة صغيرة (100g) + موزة</b>الأسرع والأبسط<span class="m">~24g بروتين | ~210 kcal</span></div>
+      <div class="alt-item"><b>🥛 Plain skyr 200g + banana</b>Natural protein, no powder — straight from the supermarket<span class="m">~22g protein | ~230 kcal</span></div>
+      <div class="alt-item"><b>🥚 3 boiled eggs + banana</b>Prepped ahead of time — very practical<span class="m">~20g protein | ~270 kcal</span></div>
+      <div class="alt-item"><b>🐟 Small canned tuna (100g) + banana</b>Fastest and simplest<span class="m">~24g protein | ~210 kcal</span></div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-head"><div class="card-title">🌙 العشاء</div><div class="card-meta">~42g | ~610 kcal</div></div>
+    <div class="card-head"><div class="card-title">🌙 Dinner</div><div class="card-meta">~42g | ~610 kcal</div></div>
     <ul>
-      <li>5 بيضات كاملة (~250g)</li>
-      <li>30g جبنة موزاريلا</li>
-      <li>1 خبز تورتيلا (~50g، 175 kcal)</li>
-      <li>رشة ملح وفلفل أسود — اطبخ بسبراي زيت</li>
+      <li>5 whole eggs (~250g)</li>
+      <li>30g mozzarella</li>
+      <li>1 tortilla wrap (~50g, 175 kcal)</li>
+      <li>Salt and black pepper — cook with oil spray</li>
     </ul>
-    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ بديل سريع بدون طبخ (5 دقائق)</div>
+    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ Quick no-cook alternative (5 minutes)</div>
     <div class="alts">
-      <div class="alt-item"><b>🥛 300g Fromage blanc 0% (Envia/Lidl) + 4 بيضات مسلوقة</b>مش محتاج طبخ — جاهز في 5 دقائق. Nutri-Score A، 0g دهون.<span class="m">~46g بروتين | ~415 kcal</span></div>
+      <div class="alt-item"><b>🥛 300g Fromage blanc 0% (Envia/Lidl) + 4 boiled eggs</b>No cooking needed — ready in 5 minutes. Nutri-Score A, 0g fat.<span class="m">~46g protein | ~415 kcal</span></div>
     </div>
-    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ بدائل العشاء (حلال — 5-10 دقائق)</div>
+    <div class="alt-toggle" onclick="this.nextElementSibling.classList.toggle('show')">▸ Dinner alternatives (halal — 5-10 minutes)</div>
     <div class="alts">
-      <div class="alt-item"><b>🥛 زبادي يوناني + بيض مسلوق</b>200g زبادي يوناني (Skyr أو Greek) + 2 بيضة + 100g خضار — مش محتاج طبخ<span class="m">~38g بروتين | ~400 kcal</span></div><div class="alt-item"><b>🥛 300g Fromage blanc 0% Lidl + 4 بيضات مسلوقة</b>الأسرع والأرخص — 0g دهون، Nutri-Score A. أفضل اختيار يوم ما مفيش وقت<span class="m">~46g بروتين | ~415 kcal</span></div>
-      <div class="alt-item"><b>🐟 تونة + موزاريلا + تورتيلا</b>150g تونة مصفاة + 30g موزاريلا + تورتيلا + سلطة — 3 دقائق<span class="m">~40g بروتين | ~415 kcal</span></div>
-      <div class="alt-item"><b>🍗 دجاج/ديك رومي بارد محضّر مسبقاً</b>150g مشوي + 100g خضار سوتيه + 10ml زيت زيتون — من التحضير المسبق<span class="m">~42g بروتين | ~395 kcal</span></div>
-      <div class="alt-item"><b>🐟 سلمون مدخن + بيض</b>80g saumon fumé + 3 بيضات مسلوقة + 100g خضار — مش محتاج طبخ<span class="m">~40g بروتين | ~410 kcal</span></div>
-      <div class="alt-item"><b>🥣 Skyr nature + واي بروتين</b>300g Skyr + سكوب واي + فواكه حمراء — خيار سريع جداً بدون طبخ<span class="m">~50g بروتين | ~380 kcal</span></div>
-      <div class="alt-item"><b>🥚 بيض مقلي + ديك رومي مقدد حلال</b>4 بيضات + 60g blanc de dinde (بديل لحم خنزير) + تورتيلا<span class="m">~42g بروتين | ~440 kcal</span></div>
-      <div class="alt-item"><b>🐟 سردين + بيض مسلوق + خبز</b>1 علبة سردين + 2 بيضة مسلوقة + شريحتان خبز أسمر<span class="m">~38g بروتين | ~420 kcal</span></div>
+      <div class="alt-item"><b>🥛 Greek yogurt + boiled egg</b>200g Greek yogurt (Skyr or Greek) + 2 eggs + 100g vegetables — no cooking needed<span class="m">~38g protein | ~400 kcal</span></div><div class="alt-item"><b>🥛 300g Fromage blanc 0% Lidl + 4 boiled eggs</b>Fastest and cheapest — 0g fat, Nutri-Score A. Best choice when short on time<span class="m">~46g protein | ~415 kcal</span></div>
+      <div class="alt-item"><b>🐟 Tuna + mozzarella + tortilla</b>150g drained tuna + 30g mozzarella + tortilla + salad — 3 minutes<span class="m">~40g protein | ~415 kcal</span></div>
+      <div class="alt-item"><b>🍗 Pre-cooked cold chicken/turkey</b>150g grilled + 100g sautéed vegetables + 10ml olive oil — from meal prep<span class="m">~42g protein | ~395 kcal</span></div>
+      <div class="alt-item"><b>🐟 Smoked salmon + egg</b>80g smoked salmon + 3 boiled eggs + 100g vegetables — no cooking needed<span class="m">~40g protein | ~410 kcal</span></div>
+      <div class="alt-item"><b>🥣 Plain skyr + whey protein</b>300g skyr + scoop of whey + red fruit — very quick, no cooking<span class="m">~50g protein | ~380 kcal</span></div>
+      <div class="alt-item"><b>🥚 Fried eggs + halal turkey bacon</b>4 eggs + 60g turkey slices (pork substitute) + tortilla<span class="m">~42g protein | ~440 kcal</span></div>
+      <div class="alt-item"><b>🐟 Sardines + boiled egg + bread</b>1 can sardines + 2 boiled eggs + 2 slices whole-grain bread<span class="m">~38g protein | ~420 kcal</span></div>
     </div>
   </div>
 
   <div class="total-card">
-    <div class="label">يوم تمرين — تقديري</div>
+    <div class="label">Training day — estimated</div>
     <div class="total-nums">
-      <div><span id="ttProt">176g</span><small>بروتين</small></div>
+      <div><span id="ttProt">176g</span><small>protein</small></div>
       <div><span id="ttKcal">2245</span><small>kcal</small></div>
     </div>
   </div>
   <div class="total-card" style="background:var(--iron);margin-top:8px;">
-    <div class="label">يوم راحة — تقديري</div>
+    <div class="label">Rest day — estimated</div>
     <div class="total-nums">
-      <div><span id="ttProtR">154g</span><small>بروتين</small></div>
+      <div><span id="ttProtR">154g</span><small>protein</small></div>
       <div><span id="ttKcalR">2020</span><small>kcal</small></div>
     </div>
   </div>
 
   <div class="card" style="margin-top:12px;">
-    <div class="card-head"><div class="card-title">🍽️ المطاعم والجوع — قواعد المرونة</div><div class="card-meta">مهم للاستمرارية</div></div>
+    <div class="card-head"><div class="card-title">🍽️ Restaurants & hunger — flexibility rules</div><div class="card-meta">important for consistency</div></div>
     <ul>
-      <li><b>مطعم مرة/أسبوع = مقبول تماماً.</b> اطلب: بروتين مشوي + خضار + كارب. تجنب المقليات والصلصات الثقيلة</li>
-      <li><b>لو جعت بين الوجبات = كُل.</b> الجوع معناه الخطة ناقصة سعرات، مش إنك فشلت</li>
+      <li><b>Eating out once a week is totally fine.</b> Order: grilled protein + vegetables + carb. Avoid fried food and heavy sauces</li>
+      <li><b>If you're hungry between meals, eat.</b> Hunger means the plan is short on calories, not that you failed</li>
     </ul>
-    <div class="ft-row"><span>🍉 دلاع</span><span class="ft-days">200-300g</span></div>
-    <div class="ft-row"><span>🍎 تفاح</span><span class="ft-days">1-2 حبة</span></div>
-    <div class="ft-row"><span>🍐 إنجاص</span><span class="ft-days">1-2 حبة</span></div>
-    <div class="ft-row"><span>🍇 عنب</span><span class="ft-days">100-150g بس (سكر أعلى)</span></div>
-    <div class="ft-row"><span>🥜 مكسرات</span><span class="ft-days">30g فقط — وزنها!</span></div>
+    <div class="ft-row"><span>🍉 Watermelon</span><span class="ft-days">200-300g</span></div>
+    <div class="ft-row"><span>🍎 Apple</span><span class="ft-days">1-2 pieces</span></div>
+    <div class="ft-row"><span>🍐 Pear</span><span class="ft-days">1-2 pieces</span></div>
+    <div class="ft-row"><span>🍇 Grapes</span><span class="ft-days">100-150g only (higher sugar)</span></div>
+    <div class="ft-row"><span>🥜 Nuts</span><span class="ft-days">30g only — weigh them!</span></div>
     <div class="note-box" style="margin-top:10px;">
-      <b>القاعدة:</b> الخطة تخدمك أنت — مش أنت تخدم الخطة. اللي مش مستدام مش هيستمر.
+      <b>Rule:</b> the plan serves you — not the other way around. Whatever isn't sustainable won't last.
     </div>
   </div>
   <div class="note-box" style="margin-top:10px;">
-      <b>الحد الأدنى للبروتين: 150g</b> — لو يوم اتلخبط، ده الرقم اللي متنزلش تحته.<br><br>
-      ⚠️ <b>كل الأرقام دي تقديرية.</b> محسوبة من متوسطات الأطعمة، مش من ملصقات منتجاتك بالظبط.
-      <b>الحكم النهائي هو اتجاه وزنك الأسبوعي</b> — لو الوزن مش بيتحرك زي المتوقع، عدّل السعرات مش الحسبة.
+      <b>Minimum protein: 150g</b> — if a day gets messy, that's the number not to drop below.<br><br>
+      ⚠️ <b>All these numbers are estimates.</b> Calculated from food averages, not from the exact labels of your products.
+      <b>The final judge is your weekly weight trend</b> — if the weight isn't moving as expected, adjust the calories, not the math.
     </div>
 
     <div class="card" style="margin-top:12px;">
-      <div class="card-head"><div class="card-title">🍎 السناك — يومي</div><div class="card-meta">~9g ألياف | ~160 kcal</div></div>
+      <div class="card-head"><div class="card-title">🍎 Snack — daily</div><div class="card-meta">~9g fiber | ~160 kcal</div></div>
       <ul>
-        <li>1 تفاحة بالقشر (~180g)</li>
-        <li>1 إنجاصة (~180g)</li>
+        <li>1 apple with skin (~180g)</li>
+        <li>1 pear (~180g)</li>
       </ul>
       <div class="note-box" style="margin-top:10px;">
-        ده مش إضافة اختيارية — <b>ده اللي بيوصلك لهدف الألياف (23g → 32g)</b>.<br>
-        كُلهم وقت ما تجوع بين الوجبات، مش لازم وقت محدد.
+        This isn't optional extra — <b>it's what gets you to the fiber goal (23g → 32g)</b>.<br>
+        Eat them whenever you're hungry between meals, no fixed time needed.
       </div>
     </div>
 
     <div class="card" style="margin-top:12px;">
-      <div class="card-head"><div class="card-title">🌾 الألياف — الهدف 30g/يوم</div><div class="card-meta">مصادر بديلة</div></div>
-      <div class="ft-row"><span>🍎 تفاحة + إنجاصة (السناك)</span><span class="ft-days">+9g · +160 kcal ✅</span></div>
-      <div class="ft-row"><span>🫘 Haricots rouges معلبة 150g</span><span class="ft-days">+11g · +130 kcal · +8g بروتين</span></div>
-      <div class="ft-row"><span>🥦 Brocoli مجمد 250g</span><span class="ft-days">+8g · +85 kcal · +7g بروتين</span></div>
-      <div class="ft-row"><span>🟢 Petits pois مجمدة 200g</span><span class="ft-days">+9g · +160 kcal · +10g بروتين</span></div>
-      <div class="ft-row"><span>🍞 Pain complet شريحتين</span><span class="ft-days">+6g · +160 kcal</span></div>
-      <div class="ft-row"><span>🥜 لوز 30g</span><span class="ft-days">+4g · +175 kcal</span></div>
+      <div class="card-head"><div class="card-title">🌾 Fiber — 30g/day target</div><div class="card-meta">alternative sources</div></div>
+      <div class="ft-row"><span>🍎 Apple + pear (snack)</span><span class="ft-days">+9g · +160 kcal ✅</span></div>
+      <div class="ft-row"><span>🫘 Canned red kidney beans 150g</span><span class="ft-days">+11g · +130 kcal · +8g protein</span></div>
+      <div class="ft-row"><span>🥦 Frozen broccoli 250g</span><span class="ft-days">+8g · +85 kcal · +7g protein</span></div>
+      <div class="ft-row"><span>🟢 Frozen peas 200g</span><span class="ft-days">+9g · +160 kcal · +10g protein</span></div>
+      <div class="ft-row"><span>🍞 Whole-grain bread, 2 slices</span><span class="ft-days">+6g · +160 kcal</span></div>
+      <div class="ft-row"><span>🥜 Almonds 30g</span><span class="ft-days">+4g · +175 kcal</span></div>
       <div class="note-box" style="margin-top:10px;">
-        <b>الأساسي:</b> السناك (تفاحة + إنجاصة) بيغطي الهدف لوحده.<br>
-        <b>لو عايز أقوى:</b> ضيف علبة Haricots rouges في الغداء — أرخص وأسرع خيار، وبيزوّد البروتين كمان.<br>
-        كل دول متوفرين في Lidl وCarrefour.
+        <b>The basics:</b> the snack (apple + pear) covers the goal on its own.<br>
+        <b>Want it stronger:</b> add a can of red kidney beans to lunch — cheapest and quickest option, and it boosts protein too.<br>
+        All available at Lidl and Carrefour.
       </div>
     </div>
 
@@ -360,120 +367,120 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <!-- ===================== GYM ===================== -->
 <section id="gym">
 
-  <div class="freq-note">كل عضلة بتتمرن <b>مرتين في الأسبوع</b> — Upper A+B، Lower A+B</div>
+  <div class="freq-note">Every muscle trains <b>twice a week</b> — Upper A+B, Lower A+B</div>
 
-  <div class="card" style="border-right:3px solid var(--good);">
-    <div class="card-head"><div class="card-title">🔥 الإحماء — إجباري قبل كل جلسة</div><div class="card-meta">8-10 دقائق</div></div>
+  <div class="card" style="border-left:3px solid var(--good);">
+    <div class="card-head"><div class="card-title">🔥 Warm-up — mandatory before every session</div><div class="card-meta">8-10 minutes</div></div>
     <ul>
-      <li>5 دقائق كارديو خفيف (مشي سريع / دراجة ثابتة)</li>
-      <li>دوران مفاصل: كتف، ورك، ركبة — 10 مرات لكل اتجاه</li>
-      <li><b>1-3 سيتات إحماء</b> بوزن خفيف (40-60% من وزن العمل) قبل أول تمرين مركب</li>
+      <li>5 minutes light cardio (brisk walk / stationary bike)</li>
+      <li>Joint rotations: shoulder, hip, knee — 10 reps each direction</li>
+      <li><b>1-3 warm-up sets</b> at light weight (40-60% of working weight) before your first compound movement</li>
     </ul>
     <div class="note-box" style="margin-top:10px;">
-      <b>القاعدة:</b> 8-10 دقائق إحماء. اختر حركات <b>لا تسبب ألماً</b>، وزوّد التحميل تدريجياً في السيتات التحضيرية.<br>
-      حركات زي Cat-Cow أو Glute Bridge ممكن تساعد قبل أيام Lower — جرّبها، وشيلها لو مش مريحة.
+      <b>Rule:</b> 8-10 minutes of warm-up. Choose movements that <b>don't cause pain</b>, and load up gradually through the prep sets.<br>
+      Moves like Cat-Cow or Glute Bridge can help before Lower days — try them, drop them if they're not comfortable.
     </div>
   </div>
 
   <div class="deload-box">
-    <b>Double Progression — قاعدة التقدم:</b><br>
-    كل تمرين له <b>نطاق ريب</b> (مثال: 3×8-12). الطريقة:<br>
-    1️⃣ ثبّت نفس الوزن لحد ما توصل <b>أعلى النطاق (12) في كل السيتات</b><br>
-    2️⃣ ساعتها بس زوّد الوزن <b>أصغر زيادة متاحة</b> في الجيم<br>
-    3️⃣ ارجع لأسفل النطاق (8) وكرّر<br><br>
-    <b>ليه مش نسبة مئوية؟</b> زيادة 5% على Lateral Raise ممكن تكون قفزة ضخمة. النطاق بيحمي من ده.<br><br>
-    ⚠️ <b>Deload:</b> فشل (RIR 0) في <b>أسبوعين مختلفين</b> على نفس التمرين → خفّف الوزن 10% لأسبوع<br>
-    🔄 كل 6 أسابيع → أسبوع Deload (حجم 50%، نفس الحركات)<br><br>
-    <b>أوقات الراحة بين السيتات:</b><br>
-    🏋️ تمارين مركبة: <b>2-3 دقائق</b> · 💪 عزل: <b>60-90 ثانية</b> · 🧘 Core: <b>45-60 ثانية</b>
+    <b>Double Progression — the progress rule:</b><br>
+    Every exercise has a <b>rep range</b> (e.g. 3×8-12). The method:<br>
+    1️⃣ Keep the same weight until you hit <b>the top of the range (12) on every set</b><br>
+    2️⃣ Only then increase the weight by <b>the smallest increment available</b> at the gym<br>
+    3️⃣ Drop back to the bottom of the range (8) and repeat<br><br>
+    <b>Why not a percentage?</b> A 5% jump on Lateral Raise could be a massive leap. The range protects against that.<br><br>
+    ⚠️ <b>Deload:</b> failure (RIR 0) in <b>two different weeks</b> on the same exercise → cut the weight 10% for a week<br>
+    🔄 Every 6 weeks → a deload week (50% volume, same movements)<br><br>
+    <b>Rest times between sets:</b><br>
+    🏋️ Compound exercises: <b>2-3 minutes</b> · 💪 Isolation: <b>60-90 seconds</b> · 🧘 Core: <b>45-60 seconds</b>
   </div>
 
   <!-- DAY 1 -->
   <div class="day-card">
-    <div class="day-head"><div class="day-title">الإتنين — Upper A</div><div class="day-tag">DAY 1</div></div>
+    <div class="day-head"><div class="day-title">Monday — Upper A</div><div class="day-tag">DAY 1</div></div>
     <div id="ex-upperA"></div>
   </div>
 
   <!-- DAY 2 -->
   <div class="day-card">
-    <div class="day-head"><div class="day-title">التلات — Lower A</div><div class="day-tag">DAY 2</div></div>
+    <div class="day-head"><div class="day-title">Tuesday — Lower A</div><div class="day-tag">DAY 2</div></div>
     <div style="background:#fff8e1;border:1px solid var(--warn);border-radius:8px;padding:9px 12px;margin-bottom:10px;font-size:12px;">
-      🔄 <b>RDL رجع — بروتوكول عودة حذرة (وزن خفيف)</b><br><br>
-      <b>أسبوع 1-2:</b> وزن خفيف جداً (40-50% من الوزن العادي)، 3×10، حركة بطيئة ومتحكم فيها. وقف فوراً لو حسيت ألم أثناء الحركة.<br><br>
-      <b>بعد كل جلسة، تأكد من نقطتين:</b><br>
-      ✔️ مفيش ألم أثناء التنفيذ<br>
-      ✔️ مفيش تدهور خلال 24-48 ساعة بعدها (يوم بكرة أهم من يوم النهاردة)<br><br>
-      ✅ جلستين من غير أي إشارة ألم → زوّد الوزن تدريجياً (Double Progression عادي)<br>
-      ⚠️ ألم أثناء أو بعد → رجّع Leg Curl فوراً، ولو استمر راجع فيزيوثيرابيست أو طبيب.
+      🔄 <b>RDL return — cautious comeback protocol (light weight)</b><br><br>
+      <b>Week 1-2:</b> very light weight (40-50% of normal), 3×10, slow and controlled movement. Stop immediately if you feel pain during the movement.<br><br>
+      <b>After every session, check two things:</b><br>
+      ✔️ No pain during execution<br>
+      ✔️ No deterioration within 24-48 hours after (tomorrow matters more than today)<br><br>
+      ✅ Two pain-free sessions in a row → increase weight gradually (normal Double Progression)<br>
+      ⚠️ Pain during or after → switch back to Leg Curl immediately, and if it persists see a physiotherapist or doctor.
     </div>
     <div id="ex-lowerA"></div>
   </div>
 
   <!-- REST -->
   <div class="rest-card">
-    <div class="day-head"><div class="day-title">الأربع — راحة</div><div class="day-tag rest">REST</div></div>
+    <div class="day-head"><div class="day-title">Wednesday — Rest</div><div class="day-tag rest">REST</div></div>
     <div class="rest-items">
-      <div class="ri"><div class="ri-icon">🚶</div><div class="ri-txt">8,000–10,000 خطوة</div></div>
-      <div class="ri"><div class="ri-icon">😴</div><div class="ri-txt">نوم 7–9 ساعات قبل 00:30</div></div>
-      <div class="ri"><div class="ri-icon">💧</div><div class="ri-txt">3–4 لتر ماء</div></div>
-      <div class="ri"><div class="ri-icon">🧘</div><div class="ri-txt">إطالة 10 دقائق</div></div>
+      <div class="ri"><div class="ri-icon">🚶</div><div class="ri-txt">8,000–10,000 steps</div></div>
+      <div class="ri"><div class="ri-icon">😴</div><div class="ri-txt">7–9h sleep before 00:30</div></div>
+      <div class="ri"><div class="ri-icon">💧</div><div class="ri-txt">3–4L water</div></div>
+      <div class="ri"><div class="ri-icon">🧘</div><div class="ri-txt">10 min stretching</div></div>
     </div>
   </div>
 
   <!-- DAY 3 -->
   <div class="day-card">
-    <div class="day-head"><div class="day-title">الخميس — Upper B</div><div class="day-tag">DAY 3</div></div>
+    <div class="day-head"><div class="day-title">Thursday — Upper B</div><div class="day-tag">DAY 3</div></div>
     <div id="ex-upperB"></div>
   </div>
 
   <!-- DAY 4 -->
   <div class="day-card">
-    <div class="day-head"><div class="day-title">الجمعة — Lower B</div><div class="day-tag">DAY 4</div></div>
+    <div class="day-head"><div class="day-title">Friday — Lower B</div><div class="day-tag">DAY 4</div></div>
     <div style="background:#fff8e1;border:1px solid var(--warn);border-radius:8px;padding:9px 12px;margin-bottom:10px;font-size:12px;">
-      ⚠️ <b>Hip Thrust — قاعدة التحميل:</b> ابدأ بوزن خفيف. زوّد الحمل <b>فقط طالما الأداء بدون ألم</b>.<br>
-      لو حسيت أي ألم في أسفل الظهر → قلّل الوزن، وتجنّب فرد الظهر الزائد (hyperextension) في أعلى الحركة.
+      ⚠️ <b>Hip Thrust — loading rule:</b> start light. Only increase load <b>as long as it's pain-free</b>.<br>
+      If you feel any lower-back pain → reduce the weight, and avoid excessive hyperextension at the top of the movement.
     </div>
     <div id="ex-lowerB"></div>
   </div>
 
   <!-- REST WEEKEND -->
   <div class="rest-card">
-    <div class="day-head"><div class="day-title">السبت / الحد — راحة</div><div class="day-tag rest">REST</div></div>
+    <div class="day-head"><div class="day-title">Saturday / Sunday — Rest</div><div class="day-tag rest">REST</div></div>
     <div class="rest-items">
-      <div class="ri"><div class="ri-icon">🚶</div><div class="ri-txt">8,000–10,000 خطوة</div></div>
-      <div class="ri"><div class="ri-icon">😴</div><div class="ri-txt">نوم 7–9 ساعات</div></div>
-      <div class="ri"><div class="ri-icon">💧</div><div class="ri-txt">3–4 لتر ماء</div></div>
-      <div class="ri"><div class="ri-icon">🧘</div><div class="ri-txt">إطالة 10 دقائق</div></div>
+      <div class="ri"><div class="ri-icon">🚶</div><div class="ri-txt">8,000–10,000 steps</div></div>
+      <div class="ri"><div class="ri-icon">😴</div><div class="ri-txt">7–9h sleep</div></div>
+      <div class="ri"><div class="ri-icon">💧</div><div class="ri-txt">3–4L water</div></div>
+      <div class="ri"><div class="ri-icon">🧘</div><div class="ri-txt">10 min stretching</div></div>
     </div>
   </div>
 
   <div class="freq-table">
-    <div class="ft-title">تكرار كل عضلة</div>
-    <div class="ft-row"><span>صدر</span><span class="ft-days">إتنين + خميس</span></div>
-    <div class="ft-row"><span>ضهر</span><span class="ft-days">إتنين + خميس</span></div>
-    <div class="ft-row"><span>أكتاف</span><span class="ft-days">إتنين + خميس</span></div>
-    <div class="ft-row"><span>ذراع (بايسبس/ترايسبس)</span><span class="ft-days">إتنين + خميس</span></div>
-    <div class="ft-row"><span>رجل أمامي (Quads)</span><span class="ft-days">تلات + جمعة</span></div>
-    <div class="ft-row"><span>رجل خلفي (Hamstrings + RDL)</span><span class="ft-days">تلات + جمعة</span></div>
-    <div class="ft-row"><span>Glutes (Hip Thrust + RDL)</span><span class="ft-days">تلات + جمعة</span></div>
+    <div class="ft-title">Frequency per muscle</div>
+    <div class="ft-row"><span>Chest</span><span class="ft-days">Mon + Thu</span></div>
+    <div class="ft-row"><span>Back</span><span class="ft-days">Mon + Thu</span></div>
+    <div class="ft-row"><span>Shoulders</span><span class="ft-days">Mon + Thu</span></div>
+    <div class="ft-row"><span>Arms (biceps/triceps)</span><span class="ft-days">Mon + Thu</span></div>
+    <div class="ft-row"><span>Quads</span><span class="ft-days">Tue + Fri</span></div>
+    <div class="ft-row"><span>Hamstrings (+ RDL)</span><span class="ft-days">Tue + Fri</span></div>
+    <div class="ft-row"><span>Glutes (Hip Thrust + RDL)</span><span class="ft-days">Tue + Fri</span></div>
   </div>
 
   <div class="card" style="margin-top:12px;">
-    <div class="card-head"><div class="card-title">📊 حجم التدريب الأسبوعي</div><div class="card-meta">Sets لكل عضلة</div></div>
-    <div class="ft-row"><span>ضهر (Lats + Mid-back)</span><span class="ft-days">12 sets ✅</span></div>
+    <div class="card-head"><div class="card-title">📊 Weekly training volume</div><div class="card-meta">sets per muscle</div></div>
+    <div class="ft-row"><span>Back (Lats + Mid-back)</span><span class="ft-days">12 sets ✅</span></div>
     <div class="ft-row"><span>Quads (Leg Press+Extension+Bulgarian)</span><span class="ft-days">10 sets ✅</span></div>
     <div class="ft-row"><span>Hamstrings (RDL+Leg Curl)</span><span class="ft-days">6 sets ✅</span></div>
-    <div class="ft-row"><span>Glutes (RDL+Hip Thrust+Bulgarian)</span><span class="ft-days">مباشر + غير مباشر</span></div>
-    <div class="ft-row"><span>سمانة (Calves)</span><span class="ft-days">6 sets ✅</span></div>
-    <div class="ft-row"><span>صدر</span><span class="ft-days">6 مباشر</span></div>
-    <div class="ft-row"><span>أكتاف أمامي/جانبي</span><span class="ft-days">6 مباشر + غير مباشر من الضغط</span></div>
-    <div class="ft-row"><span>Rear Delts</span><span class="ft-days">3 مباشر + غير مباشر من السحب</span></div>
-    <div class="ft-row"><span>بايسبس</span><span class="ft-days">2 مباشر + غير مباشر من Rows/Pulldowns</span></div>
-    <div class="ft-row"><span>ترايسبس</span><span class="ft-days">2 مباشر + غير مباشر من Presses</span></div>
+    <div class="ft-row"><span>Glutes (RDL+Hip Thrust+Bulgarian)</span><span class="ft-days">direct + indirect</span></div>
+    <div class="ft-row"><span>Calves</span><span class="ft-days">6 sets ✅</span></div>
+    <div class="ft-row"><span>Chest</span><span class="ft-days">6 direct</span></div>
+    <div class="ft-row"><span>Front/side delts</span><span class="ft-days">6 direct + indirect from pressing</span></div>
+    <div class="ft-row"><span>Rear delts</span><span class="ft-days">3 direct + indirect from pulling</span></div>
+    <div class="ft-row"><span>Biceps</span><span class="ft-days">2 direct + indirect from rows/pulldowns</span></div>
+    <div class="ft-row"><span>Triceps</span><span class="ft-days">2 direct + indirect from presses</span></div>
     <div class="ft-row"><span>Core</span><span class="ft-days">6 sets ✅</span></div>
     <div class="note-box" style="margin-top:10px;">
-      <b>مباشر vs غير مباشر:</b> ترايسبس وبايسبس عندهم sets مباشرة قليلة، بس بياخدوا شغل إضافي من Presses وRows. ده كافي للحفاظ على العضل، مش الأمثل لو الهدف نحت الذراع تحديداً.<br><br>
-      <b>البرنامج المبسّط (5 تمارين/جلسة):</b> اخترنا الجودة والانتظام بدل ملء كل جلسة بتمارين زيادة. الاتساق أهم من الحجم الأقصى — ده الدرس اللي اتعلمناه من شهور أبريل-أغسطس.
+      <b>Direct vs indirect:</b> triceps and biceps have few direct sets, but get extra work from presses and rows. Enough to maintain the muscle, not optimal if the goal is specifically arm definition.<br><br>
+      <b>The simplified program (5 exercises/session):</b> we chose quality and consistency over filling every session with extra exercises. Consistency matters more than max volume — that's the lesson from the April-August months.
     </div>
   </div>
 </section>
@@ -481,45 +488,45 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <!-- ===================== PROGRESS ===================== -->
 <section id="progress">
 
-  <div class="card" style="border-right:3px solid var(--ember);">
-    <div class="card-head"><div class="card-title">📋 التقرير الأسبوعي — كل إتنين</div><div class="card-meta">4 أرقام</div></div>
+  <div class="card" style="border-left:3px solid var(--ember);">
+    <div class="card-head"><div class="card-title">📋 Weekly report — every Monday</div><div class="card-meta">4 numbers</div></div>
     <ul>
-      <li><b>الوزن</b> الصبح (نفس الظروف، قبل الأكل)</li>
-      <li><b>محيط الخصر</b> بشريط قياس</li>
-      <li><b>كام تمرين</b> خلصت من الـ4</li>
-      <li><b>كام يوم</b> وصلت فيه 150g بروتين</li>
+      <li><b>Weight</b> in the morning (same conditions, before eating)</li>
+      <li><b>Waist</b> circumference with a measuring tape</li>
+      <li><b>How many workouts</b> completed out of 4</li>
+      <li><b>How many days</b> you hit 150g protein</li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="card-head"><div class="card-title">⚙️ قواعد التعديل التلقائي</div><div class="card-meta">بعد 3 أسابيع</div></div>
-    <div class="ft-row"><span>نزول أقل من 0.3kg/أسبوع</span><span class="ft-days">نقلل 150-200 kcal</span></div>
-    <div class="ft-row"><span>نزول أكتر من 0.8kg/أسبوع</span><span class="ft-days">نزوّد 150 kcal ⚠️</span></div>
-    <div class="ft-row"><span>وزن نازل + أوزان الجيم نازلة</span><span class="ft-days">زوّد السعرات فوراً ⚠️</span></div>
-    <div class="ft-row"><span>خصر نازل + وزن ثابت</span><span class="ft-days">Recomp شغال — مفيش تعديل ✅</span></div>
+    <div class="card-head"><div class="card-title">⚙️ Auto-adjustment rules</div><div class="card-meta">after 3 weeks</div></div>
+    <div class="ft-row"><span>Losing less than 0.3kg/week</span><span class="ft-days">Cut 150-200 kcal</span></div>
+    <div class="ft-row"><span>Losing more than 0.8kg/week</span><span class="ft-days">Add 150 kcal ⚠️</span></div>
+    <div class="ft-row"><span>Weight down + gym weights down</span><span class="ft-days">Add calories immediately ⚠️</span></div>
+    <div class="ft-row"><span>Waist down + weight stable</span><span class="ft-days">Recomp is working — no change ✅</span></div>
     <div class="note-box" style="margin-top:10px;">
-      المعدل المستهدف: <b>0.4-0.5 kg/أسبوع</b> — ده اللي بيحافظ على العضل أثناء خسارة الدهون.
+      Target rate: <b>0.4-0.5 kg/week</b> — this preserves muscle while losing fat.
     </div>
   </div>
 
-  <div class="section-title">تشيك ليست الأسبوع</div>
+  <div class="section-title">Weekly checklist</div>
   <div class="card" style="padding:14px;">
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;" id="weekGrid"></div>
-    <div style="text-align:center;font-size:11px;color:var(--iron);font-family:'JetBrains Mono',monospace;margin-top:8px;">اضغط على اليوم اللي تمرنت فيه</div>
+    <div style="text-align:center;font-size:11px;color:var(--iron);font-family:'JetBrains Mono',monospace;margin-top:8px;">Tap the day you trained</div>
   </div>
 
-  <div class="section-title">الوزن الأسبوعي</div>
+  <div class="section-title">Weekly weight</div>
   <div class="log-card">
     <div class="log-row">
       <input type="date" id="dateInput">
       <input type="number" step="0.1" id="weightInput" placeholder="kg">
-      <button onclick="addWeight()">حفظ</button>
+      <button onclick="addWeight()">Save</button>
     </div>
     <div id="entriesList"></div>
   </div>
 
   <div class="chart-wrap">
-    <h3>📈 منحنى الوزن</h3>
+    <h3>📈 Weight curve</h3>
     <canvas id="weightChart"></canvas>
   </div>
 
@@ -528,80 +535,93 @@ footer{text-align:center;padding:24px 16px 8px;font-size:10px;color:var(--iron);
 <!-- ===================== BODY ===================== -->
 <section id="body">
 
-  <div class="section-title">قياسات الجسم (سم)</div>
+  <div class="section-title">Body measurements (cm)</div>
   <div class="log-card">
     <div class="meas-grid">
-      <div class="meas-field"><label>الخصر (cm)</label><input type="number" id="mWaist" step="0.5" placeholder="91 (baseline)"></div>
-      <div class="meas-field"><label>الصدر (cm)</label><input type="number" id="mChest" step="0.5" placeholder="100 (baseline)"></div>
-      <div class="meas-field"><label>الذراع (cm)</label><input type="number" id="mArm" step="0.5" placeholder="34 (baseline)"></div>
-      <div class="meas-field"><label>الفخذ (cm)</label><input type="number" id="mThigh" step="0.5" placeholder="90 (baseline)"></div>
+      <div class="meas-field"><label>Waist (cm)</label><input type="number" id="mWaist" step="0.5" placeholder="91 (baseline)"></div>
+      <div class="meas-field"><label>Chest (cm)</label><input type="number" id="mChest" step="0.5" placeholder="100 (baseline)"></div>
+      <div class="meas-field"><label>Arm (cm)</label><input type="number" id="mArm" step="0.5" placeholder="34 (baseline)"></div>
+      <div class="meas-field"><label>Thigh (cm)</label><input type="number" id="mThigh" step="0.5" placeholder="90 (baseline)"></div>
     </div>
     <div class="log-row" style="margin-top:4px;">
       <input type="date" id="measDate">
-      <button onclick="addMeasurement()">حفظ القياسات</button>
+      <button onclick="addMeasurement()">Save measurements</button>
     </div>
   </div>
 
   <div class="chart-wrap">
-    <h3>📉 محيط الخصر</h3>
+    <h3>📉 Waist circumference</h3>
     <canvas id="waistChart"></canvas>
   </div>
 
   <div class="log-card">
-    <h3>سجل القياسات</h3>
+    <h3>Measurement log</h3>
     <div id="measHistory" class="meas-hist"></div>
   </div>
 
   <div class="log-card">
-    <h3>📸 تذكير الصور الشهرية</h3>
+    <h3>📸 Monthly photo reminder</h3>
     <div class="note-box" style="margin-top:0;">
-      خد صورة كل أول إتنين من الشهر — نفس الإضاءة، نفس الوضعية (أمام، جانب، خلف).<br>
-      الصور أدق مؤشر للـrecomposition من الوزن والأرقام.
+      Take a photo on the first Monday of every month — same lighting, same pose (front, side, back).<br>
+      Photos are the most accurate indicator of recomposition, more than weight and numbers.
     </div>
   </div>
 
-  <div class="section-title">📐 Baseline القياسات (03/08/2026)</div>
+  <div class="section-title">📐 Baseline measurements (03/08/2026)</div>
   <div class="card">
-    <div class="card-head"><div class="card-title">القياسات الأساسية</div><div class="card-meta">مرجع البداية</div></div>
+    <div class="card-head"><div class="card-title">Baseline stats</div><div class="card-meta">starting reference</div></div>
     <ul>
-      <li>الطول: <b>180 cm</b></li>
-      <li>الوزن: <b>91.7 kg</b> — الهدف: 80 kg</li>
-      <li>الخصر (tour de taille): <b>91 cm</b> — الهدف: &lt;82 cm</li>
-      <li>الوركين (tour de hanche): <b>102 cm</b></li>
-      <li>الصدر (tour de poitrine): <b>100 cm</b> — الهدف: &gt;103 cm</li>
-      <li>البايسبس (tour de biceps): <b>34 cm</b> — الهدف: &gt;37 cm</li>
-      <li>الساعد (tour avant bras): <b>28.5 cm</b></li>
-      <li>الفخذ (tour de cuisse): <b>90 cm</b></li>
-      <li>الساق (tour de mollet): <b>41 cm</b></li>
+      <li>Height: <b>180 cm</b></li>
+      <li>Weight: <b>91.7 kg</b> — goal: 80 kg</li>
+      <li>Waist: <b>91 cm</b> — goal: &lt;82 cm</li>
+      <li>Hips: <b>102 cm</b></li>
+      <li>Chest: <b>100 cm</b> — goal: &gt;103 cm</li>
+      <li>Biceps: <b>34 cm</b> — goal: &gt;37 cm</li>
+      <li>Forearm: <b>28.5 cm</b></li>
+      <li>Thigh: <b>90 cm</b></li>
+      <li>Calf: <b>41 cm</b></li>
     </ul>
     <div class="note-box" style="margin-top:10px;">
-      <b>WHR = 0.89</b> (على الحد المقبول) · <b>WHtR = 0.506</b> (فوق المثالي بفارق بسيط)<br>
-      القياس الشهري: نفس الوقت صباحاً، نفس الشريط، نفس الوضعية.
+      <b>WHR = 0.89</b> (borderline acceptable) · <b>WHtR = 0.506</b> (slightly above ideal)<br>
+      Monthly measurement: same time in the morning, same tape, same pose.
     </div>
   </div>
 
-  <div class="section-title">💊 المكملات الكاملة</div>
+  <div class="section-title">💊 Full supplement list</div>
   <div class="card">
-    <div class="card-head"><div class="card-title">قائمة المكملات</div><div class="card-meta">محدّث 08/2026</div></div>
+    <div class="card-head"><div class="card-title">Supplements</div><div class="card-meta">updated 08/2026</div></div>
     <ul>
-      <li><b>كرياتين مونوهيدرات</b> — 3-5g يومياً، أي وقت (حتى أيام الراحة)</li>
-      <li><b>واي بروتين</b> — سكوب بعد التمرين فقط</li>
-      <li><b>فيتامين D3 (ZYMAD)</b> — 50,000 UI كل أسبوعين بوصفة الطبيب (3 أشهر)</li>
-      <li><b>ماغنيسيوم بيسجليسينات</b> — 240mg (2 كبسولة) قبل النوم</li>
-      <li><b>زنك سيترات</b> — 15mg (1 حبة فقط) مع الأكل</li>
-      <li><b>فيتامين C (وصفة)</b> — 1g الصباح لمدة شهر</li>
+      <li><b>Creatine monohydrate</b> — 3-5g daily, any time (even on rest days)</li>
+      <li><b>Whey protein</b> — one scoop, post-workout only</li>
+      <li><b>Vitamin D3 (ZYMAD)</b> — 50,000 IU every 2 weeks, on prescription (3 months)</li>
+      <li><b>Magnesium bisglycinate</b> — 240mg (2 capsules) before bed</li>
+      <li><b>Zinc citrate</b> — 15mg (1 tablet only) with food</li>
+      <li><b>Vitamin C (prescription)</b> — 1g in the morning for one month</li>
     </ul>
     <div class="note-box" style="margin-top:10px;">
-      ⚠️ <b>ملاحظة:</b> خد حبة زنك واحدة بس (15mg) — الاثنتين تعطيك 30mg وهذا على الحد الأعلى الآمن.<br>
-      بعد انتهاء D3 في أكتوبر 2026: اطلب تحليل مستوى D مرة أخرى لتحديد جرعة الصيانة.
+      ⚠️ <b>Note:</b> take only one zinc tablet (15mg) — two would give you 30mg, which is at the upper safe limit.<br>
+      After D3 ends in October 2026: request a vitamin D level test again to determine a maintenance dose.
     </div>
+  </div>
+
+  <div class="section-title">💾 Backup & restore</div>
+  <div class="log-card">
+    <div class="note-box" style="margin-top:0;margin-bottom:12px;">
+      All your data (weights, exercise logs, measurements, checklists) lives only on this device. Export it regularly and save the file somewhere safe (Google Drive, email to yourself, etc.) so you never lose your progress.
+    </div>
+    <div class="backup-row">
+      <button class="btn-export" onclick="exportData()">⬇️ Export backup</button>
+      <button class="btn-import" onclick="document.getElementById('importFile').click()">⬆️ Import backup</button>
+    </div>
+    <input type="file" id="importFile" accept="application/json" onchange="importData(event)">
+    <div id="backupStatus" style="font-size:12px;color:var(--iron);margin-top:10px;font-family:'JetBrains Mono',monospace;"></div>
   </div>
 
 </section>
 
 </div><!-- wrap -->
 
-<footer>AMINE AK95 · 180cm / 91.7kg / خصر 91cm · Baseline 03/08/2026 · Start 10/08/2026</footer>
+<footer>AMINE AK95 · 180cm / 91.7kg / waist 91cm · Baseline 03/08/2026 · Start 10/08/2026</footer>
 
 <script>
 // ==================== STORAGE ====================
@@ -609,15 +629,15 @@ const LS = {
   get(k){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):null; }catch(e){ return null; } },
   set(k,v){
     try{ localStorage.setItem(k,JSON.stringify(v)); return true; }
-    catch(e){ alert('⚠️ الحفظ مش شغال في المتصفح ده.\n\nالسبب الأغلب: بتفتح الملف مباشرة (file://) وده بيمنع الحفظ في Chrome وبعض المتصفحات.\n\nالحل: ارفع الملف على Google Drive وافتحه من الرابط، أو استخدم Firefox، أو استخدم نسخة claude.ai.'); return false; }
+    catch(e){ alert('⚠️ Saving isn\'t working in this browser.\n\nMost likely cause: you\'re opening the file directly (file://), which blocks saving in Chrome and some browsers.\n\nFix: upload the file to Google Drive and open it from the link, use Firefox, or use the claude.ai version.'); return false; }
   }
 };
 
 if(location.protocol === 'file:'){
   document.addEventListener('DOMContentLoaded', ()=>{
     const warn = document.createElement('div');
-    warn.style.cssText = 'background:#c04a2e;color:#fff;padding:12px 16px;text-align:center;font-size:13px;font-family:Tajawal,sans-serif;';
-    warn.innerHTML = '⚠️ بتفتح الملف مباشرة — الحفظ ممكن ميشتغلش في Chrome. لو الأزرار مش بتستجيب، افتح الملف في Firefox أو من رابط بدل ما تفتحه من جهازك مباشرة.';
+    warn.style.cssText = 'background:#c04a2e;color:#fff;padding:12px 16px;text-align:center;font-size:13px;font-family:Inter,sans-serif;';
+    warn.innerHTML = "⚠️ You're opening the file directly — saving may not work in Chrome. If the buttons aren't responding, open the file in Firefox or from a link instead of directly from your device.";
     document.body.insertBefore(warn, document.body.firstChild);
   });
 }
@@ -647,7 +667,7 @@ function calcMacros(){
   const g = document.getElementById('calcGoal').value;
   // Mifflin-St Jeor, 180cm, 31y
   const bmr = 10*w + 6.25*180 - 5*31 + 5;
-  // 1.45 = شغل مكتبي + 4 تمارين + 8-10k خطوة (مش 1.55 = نشاط أعلى)
+  // 1.45 = office job + 4 workouts + 8-10k steps (not 1.55 = higher activity)
   const tdee = bmr * 1.45;
   let deficit = g==='recomp'?500 : g==='cut'?650 : 0;
   const kcalTrain = Math.round(tdee - deficit);
@@ -680,7 +700,7 @@ function updateGoalBar(){
   document.getElementById('pbCur').textContent = latest+' kg';
   const now = new Date();
   const weeks = Math.max(0, Math.round((now-START_DATE)/(7*86400000)));
-  document.getElementById('gWeeks').textContent = weeks+' أسبوع';
+  document.getElementById('gWeeks').textContent = weeks+' wk';
   document.getElementById('calcWeight').value = latest;
   calcMacros();
 }
@@ -697,14 +717,14 @@ const EXERCISES = {
   ],
   lowerA:[
     {id:'lp',   name:'Leg Press',               url:'https://youtube.com/shorts/EotSw18oR9w', target:'4×8-12'},
-    {id:'rdl2', name:'Dumbbell RDL — عودة حذرة، وزن خفيف', url:'https://youtube.com/shorts/up0sPrYCTkI', target:'3×10'},
+    {id:'rdl2', name:'Dumbbell RDL — cautious return, light weight', url:'https://youtube.com/shorts/up0sPrYCTkI', target:'3×10'},
     {id:'lext', name:'Leg Extension',           url:'https://youtube.com/shorts/EotSw18oR9w', target:'3×10-15'},
     {id:'scr',  name:'Standing Calf Raise',     url:'https://youtube.com/shorts/ADITZCcUyVo', target:'3×10-20'},
     {id:'mcrn', name:'Machine Crunch',          url:'https://youtube.com/shorts/K2m0jj6RfYg', target:'3×10-15'},
   ],
   upperB:[
     {id:'idp',  name:'Incline Dumbbell Press',  url:'https://youtube.com/shorts/8fXfwG4ftaQ', target:'3×8-12'},
-    {id:'sadr', name:'Single-Arm Dumbbell Row (ركبة على البنش)', url:'https://youtube.com/shorts/pYcpY20QaQ8', target:'3×8-12'},
+    {id:'sadr', name:'Single-Arm Dumbbell Row (knee on bench)', url:'https://youtube.com/shorts/pYcpY20QaQ8', target:'3×8-12'},
     {id:'lr',   name:'Lateral Raise',           url:'https://youtube.com/shorts/Kl3LEzQ5Zqs', target:'3×12-20'},
     {id:'rdf',  name:'Rear Delt Fly',           url:'https://youtube.com/shorts/LsT-bR_zxLo', target:'3×12-20'},
     {id:'hcrl', name:'Hammer Curl',             url:'https://youtube.com/shorts/VuEclXR7sZY', target:'2×10-15'},
@@ -747,7 +767,7 @@ function parseTarget(t){
   return { sets:+m[1], lo:+m[2], hi: m[3] ? +m[3] : +m[2] };
 }
 
-// FIXED: counts DISTINCT WEEKS containing a failure, not raw log count
+// counts DISTINCT WEEKS containing a failure, not raw log count
 function getFailWeeks(id){
   const logs = getExLogs(id);
   const now = new Date();
@@ -762,9 +782,9 @@ function getFailWeeks(id){
 
 
 function renderPB(id, pb){
-  if(!pb) return 'أفضل سابق: —';
-  return 'أفضل سابق: <span class="pb-val">' + pb.weight + 'kg × ' + pb.reps +
-         '</span> <span onclick="deleteLastLog(\'' + id + '\')" style="cursor:pointer;color:var(--ember);font-size:11px;">🗑️ حذف آخر تسجيل</span>';
+  if(!pb) return 'Best so far: —';
+  return 'Best so far: <span class="pb-val">' + pb.weight + 'kg × ' + pb.reps +
+         '</span> <span onclick="deleteLastLog(\'' + id + '\')" style="cursor:pointer;color:var(--ember);font-size:11px;">🗑️ delete last entry</span>';
 }
 
 function renderExercises(listId, exArr){
@@ -781,20 +801,20 @@ function renderExercises(listId, exArr){
         <span class="ex-name">${ex.url ? `<a href="${ex.url}" target="_blank">${ex.name}</a>` : `<span>${ex.name}</span>`}</span>
         <span class="ex-target">${ex.target}</span>
       </div>
-      ${warnDeload ? '<div style="color:var(--ember);font-size:12px;margin-bottom:6px;">⚠️ فشل في أسبوعين مختلفين — فكّر في Deload</div>' : ''}
+      ${warnDeload ? '<div style="color:var(--ember);font-size:12px;margin-bottom:6px;">⚠️ Failed in two different weeks — consider a deload</div>' : ''}
       <div class="ex-log-row">
-        <input type="number" step="0.5" placeholder="وزن (kg)" id="w_${ex.id}">
-        <input type="number" step="1"   placeholder="ريب"      id="r_${ex.id}">
+        <input type="number" step="0.5" placeholder="weight (kg)" id="w_${ex.id}">
+        <input type="number" step="1"   placeholder="reps"      id="r_${ex.id}">
         <select id="rir_${ex.id}">
           <option value="3">RIR 3+</option>
           <option value="2" selected>RIR 2</option>
           <option value="1">RIR 1</option>
-          <option value="0">RIR 0 (فشل)</option>
+          <option value="0">RIR 0 (failure)</option>
         </select>
         <button onclick="logEx('${ex.id}','${listId}')">✓</button>
       </div>
       <div class="ex-pb" id="pb_${ex.id}">
-        ${pb ? renderPB(ex.id, pb) : 'أفضل سابق: —'}
+        ${pb ? renderPB(ex.id, pb) : 'Best so far: —'}
       </div>`;
     container.appendChild(div);
   });
@@ -804,7 +824,7 @@ function logEx(id, listId){
   const w   = parseFloat(document.getElementById('w_'+id).value);
   const r   = parseInt(document.getElementById('r_'+id).value);
   const rir = parseInt(document.getElementById('rir_'+id).value);
-  if(!w||!r){ alert('دخّل الوزن والريب'); return; }
+  if(!w||!r){ alert('Enter the weight and reps'); return; }
 
   const entry = {date:new Date().toISOString(), weight:w, reps:r, rir};
   saveExLog(id, entry);
@@ -822,17 +842,17 @@ function logEx(id, listId){
   // ---- DOUBLE PROGRESSION ----
   if(tgt){
     if(r >= tgt.hi && rir >= 2){
-      alert(`✅ وصلت لأعلى النطاق (${tgt.hi} ريب) بـRIR ${rir}.\n\nزوّد الوزن أصغر زيادة متاحة في الجيم، وارجع لأسفل النطاق (${tgt.lo} ريب).`);
+      alert(`✅ You hit the top of the range (${tgt.hi} reps) at RIR ${rir}.\n\nIncrease the weight by the smallest increment available at the gym, and drop back to the bottom of the range (${tgt.lo} reps).`);
     } else if(r < tgt.lo){
-      alert(`⚠️ ${r} ريب — تحت النطاق المستهدف (${tgt.lo}-${tgt.hi}).\n\nخفّف الوزن شوية عشان تقدر تكمل النطاق كامل.`);
+      alert(`⚠️ ${r} reps — below the target range (${tgt.lo}-${tgt.hi}).\n\nLighten the weight a bit so you can complete the full range.`);
     } else {
-      alert(`👍 ${r} ريب — داخل النطاق (${tgt.lo}-${tgt.hi}).\n\nثبّت نفس الوزن لحد ما توصل ${tgt.hi} ريب في كل السيتات.`);
+      alert(`👍 ${r} reps — within range (${tgt.lo}-${tgt.hi}).\n\nKeep the same weight until you hit ${tgt.hi} reps on every set.`);
     }
   }
 }
 
 function deleteLastLog(id){
-  if(!confirm('تحذف آخر تسجيل لهذا التمرين؟')) return;
+  if(!confirm('Delete the last entry for this exercise?')) return;
   let logs = getExLogs(id);
   logs.pop();
   LS.set('amine-ex-'+id, logs);
@@ -847,13 +867,13 @@ renderExercises('ex-lowerB', EXERCISES.lowerB);
 
 // ==================== WEEK CHECKLIST ====================
 const DAYS=[
-  {key:'mon',name:'إتنين',sub:'Upper A'},
-  {key:'tue',name:'تلات', sub:'Lower A'},
-  {key:'wed',name:'أربع', sub:'راحة'},
-  {key:'thu',name:'خميس',sub:'Upper B'},
-  {key:'fri',name:'جمعة',sub:'Lower B'},
-  {key:'sat',name:'سبت', sub:'راحة'},
-  {key:'sun',name:'حد',  sub:'راحة'}
+  {key:'mon',name:'Mon',sub:'Upper A'},
+  {key:'tue',name:'Tue', sub:'Lower A'},
+  {key:'wed',name:'Wed', sub:'Rest'},
+  {key:'thu',name:'Thu',sub:'Upper B'},
+  {key:'fri',name:'Fri',sub:'Lower B'},
+  {key:'sat',name:'Sat', sub:'Rest'},
+  {key:'sun',name:'Sun',  sub:'Rest'}
 ];
 function getWeekKey(){
   const n=new Date(), y=n.getFullYear();
@@ -882,7 +902,7 @@ document.getElementById('dateInput').valueAsDate = new Date();
 function addWeight(){
   const dt=document.getElementById('dateInput').value;
   const wt=parseFloat(document.getElementById('weightInput').value);
-  if(!dt||!wt){ alert('دخّل التاريخ والوزن'); return; }
+  if(!dt||!wt){ alert('Enter the date and weight'); return; }
   let entries=LS.get('amine-weight-entries')||[];
   entries=entries.filter(e=>e.date!==dt);
   entries.push({date:dt, weight:wt});
@@ -894,7 +914,7 @@ function addWeight(){
 }
 
 function deleteWeight(date){
-  if(!confirm('تحذف قياس يوم '+date+'؟')) return;
+  if(!confirm('Delete the entry for '+date+'?')) return;
   let entries=LS.get('amine-weight-entries')||[];
   entries=entries.filter(e=>e.date!==date);
   LS.set('amine-weight-entries', entries);
@@ -907,7 +927,7 @@ function renderWeightEntries(){
   const list=document.getElementById('entriesList');
   let entries=LS.get('amine-weight-entries')||[];
   entries.sort((a,b)=>new Date(b.date)-new Date(a.date));
-  if(!entries.length){ list.innerHTML='<div class="empty">سجّل أول وزن يوم الإتنين الجاي</div>'; return; }
+  if(!entries.length){ list.innerHTML='<div class="empty">Log your first weight next Monday</div>'; return; }
   list.innerHTML=entries.slice(0,8).map((e,i,arr)=>{
     let diffHtml='';
     if(i<arr.length-1){
@@ -916,8 +936,8 @@ function renderWeightEntries(){
       diffHtml=`<span class="diff ${cls}">${diff>0?'+':''}${diff}kg</span>`;
     }
     const d=new Date(e.date);
-    const ds=d.toLocaleDateString('ar-EG',{day:'2-digit',month:'2-digit',year:'numeric'});
-    return `<div class="entry"><span class="d">${ds}</span><span><span class="w">${e.weight}kg</span>${diffHtml}<span onclick="deleteWeight('${e.date}')" style="cursor:pointer;color:var(--ember);margin-right:8px;font-size:14px;">🗑️</span></span></div>`;
+    const ds=d.toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric'});
+    return `<div class="entry"><span class="d">${ds}</span><span><span class="w">${e.weight}kg</span>${diffHtml}<span onclick="deleteWeight('${e.date}')" style="cursor:pointer;color:var(--ember);margin-left:8px;font-size:14px;">🗑️</span></span></div>`;
   }).join('');
 }
 renderWeightEntries();
@@ -928,7 +948,7 @@ function renderWeightChart(){
   entries.sort((a,b)=>new Date(a.date)-new Date(b.date));
   const labels=entries.map(e=>e.date);
   const data=entries.map(e=>e.weight);
-  if(typeof Chart === 'undefined'){ console.warn('Chart.js لم يتحمّل — تحقق من الاتصال بالإنترنت'); return; }
+  if(typeof Chart === 'undefined'){ console.warn('Chart.js failed to load — check your internet connection'); return; }
   const ctx=document.getElementById('weightChart').getContext('2d');
   if(wChart) wChart.destroy();
   if(!data.length){ return; }
@@ -937,8 +957,8 @@ function renderWeightChart(){
     data:{
       labels,
       datasets:[
-        {label:'الوزن (kg)',data,borderColor:'#c04a2e',backgroundColor:'rgba(192,74,46,.08)',tension:.3,pointRadius:4,pointBackgroundColor:'#c04a2e'},
-        {label:'الهدف (80kg)',data:labels.map(()=>80),borderColor:'#3f6b4f',borderDash:[5,5],pointRadius:0,borderWidth:1.5}
+        {label:'Weight (kg)',data,borderColor:'#c04a2e',backgroundColor:'rgba(192,74,46,.08)',tension:.3,pointRadius:4,pointBackgroundColor:'#c04a2e'},
+        {label:'Goal (80kg)',data:labels.map(()=>80),borderColor:'#3f6b4f',borderDash:[5,5],pointRadius:0,borderWidth:1.5}
       ]
     },
     options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{min:75,max:95,ticks:{font:{family:'JetBrains Mono',size:10}}}}}
@@ -954,7 +974,7 @@ function addMeasurement(){
   const chest=parseFloat(document.getElementById('mChest').value)||null;
   const arm=parseFloat(document.getElementById('mArm').value)||null;
   const thigh=parseFloat(document.getElementById('mThigh').value)||null;
-  if(!dt||(!waist&&!chest&&!arm&&!thigh)){ alert('دخّل التاريخ وقياس واحد على الأقل'); return; }
+  if(!dt||(!waist&&!chest&&!arm&&!thigh)){ alert('Enter the date and at least one measurement'); return; }
   let meas=LS.get('amine-measurements')||[];
   meas=meas.filter(m=>m.date!==dt);
   meas.push({date:dt,waist,chest,arm,thigh});
@@ -965,7 +985,7 @@ function addMeasurement(){
 }
 
 function deleteMeasurement(date){
-  if(!confirm('تحذف قياسات يوم '+date+'؟')) return;
+  if(!confirm('Delete the measurements for '+date+'?')) return;
   let meas=LS.get('amine-measurements')||[];
   meas=meas.filter(m=>m.date!==date);
   LS.set('amine-measurements', meas);
@@ -977,15 +997,15 @@ function renderMeasHistory(){
   const meas=LS.get('amine-measurements')||[];
   meas.sort((a,b)=>new Date(b.date)-new Date(a.date));
   const hist=document.getElementById('measHistory');
-  if(!meas.length){ hist.innerHTML='<div class="empty">لسه مفيش قياسات مسجلة</div>'; return; }
+  if(!meas.length){ hist.innerHTML='<div class="empty">No measurements logged yet</div>'; return; }
   hist.innerHTML=meas.slice(0,6).map(m=>{
-    const d=new Date(m.date).toLocaleDateString('ar-EG',{day:'2-digit',month:'2-digit',year:'numeric'});
+    const d=new Date(m.date).toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric'});
     const parts=[];
-    if(m.waist) parts.push(`خصر: ${m.waist}`);
-    if(m.chest) parts.push(`صدر: ${m.chest}`);
-    if(m.arm)   parts.push(`ذراع: ${m.arm}`);
-    if(m.thigh) parts.push(`فخذ: ${m.thigh}`);
-    return `<div class="meas-hist-row"><span class="mhd">${d}</span><span style="font-size:12px;">${parts.join(' · ')} cm <span onclick="deleteMeasurement('${m.date}')" style="cursor:pointer;color:var(--ember);margin-right:6px;">🗑️</span></span></div>`;
+    if(m.waist) parts.push(`waist: ${m.waist}`);
+    if(m.chest) parts.push(`chest: ${m.chest}`);
+    if(m.arm)   parts.push(`arm: ${m.arm}`);
+    if(m.thigh) parts.push(`thigh: ${m.thigh}`);
+    return `<div class="meas-hist-row"><span class="mhd">${d}</span><span style="font-size:12px;">${parts.join(' · ')} cm <span onclick="deleteMeasurement('${m.date}')" style="cursor:pointer;color:var(--ember);margin-left:6px;">🗑️</span></span></div>`;
   }).join('');
 }
 renderMeasHistory();
@@ -996,15 +1016,74 @@ function renderWaistChart(){
   meas.sort((a,b)=>new Date(a.date)-new Date(b.date));
   const labels=meas.filter(m=>m.waist).map(m=>m.date);
   const data=meas.filter(m=>m.waist).map(m=>m.waist);
-  if(typeof Chart === 'undefined'){ console.warn('Chart.js لم يتحمّل — تحقق من الاتصال بالإنترنت'); return; }
+  if(typeof Chart === 'undefined'){ console.warn('Chart.js failed to load — check your internet connection'); return; }
   const ctx=document.getElementById('waistChart').getContext('2d');
   if(waistChart) waistChart.destroy();
   if(!data.length){ return; }
   waistChart=new Chart(ctx,{
     type:'line',
-    data:{labels,datasets:[{label:'الخصر (cm)',data,borderColor:'#4a5a52',backgroundColor:'rgba(74,90,82,.08)',tension:.3,pointRadius:4}]},
+    data:{labels,datasets:[{label:'Waist (cm)',data,borderColor:'#4a5a52',backgroundColor:'rgba(74,90,82,.08)',tension:.3,pointRadius:4}]},
     options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{ticks:{font:{family:'JetBrains Mono',size:10}}}}}
   });
+}
+
+// ==================== BACKUP / RESTORE ====================
+// Every localStorage key this app uses, gathered dynamically so nothing gets missed
+// (exercise logs use dynamic keys like amine-ex-<id>).
+function getAllAppKeys(){
+  const keys = [];
+  for(let i=0;i<localStorage.length;i++){
+    const k = localStorage.key(i);
+    if(k && (k.startsWith('amine-'))) keys.push(k);
+  }
+  return keys;
+}
+
+function exportData(){
+  const keys = getAllAppKeys();
+  const dump = {};
+  keys.forEach(k=>{ dump[k] = LS.get(k); });
+  const payload = {
+    app: 'recomp-tracker',
+    exportedAt: new Date().toISOString(),
+    data: dump
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const dateStr = new Date().toISOString().slice(0,10);
+  a.href = url;
+  a.download = `recomp-tracker-backup-${dateStr}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  const status = document.getElementById('backupStatus');
+  if(status) status.textContent = `✅ Exported ${keys.length} data entries — check your downloads.`;
+}
+
+function importData(event){
+  const file = event.target.files[0];
+  if(!file) return;
+  const status = document.getElementById('backupStatus');
+  const reader = new FileReader();
+  reader.onload = (e)=>{
+    try{
+      const parsed = JSON.parse(e.target.result);
+      if(!parsed || !parsed.data){ throw new Error('Invalid backup file'); }
+      const entries = Object.entries(parsed.data);
+      if(!entries.length){ throw new Error('Backup file has no data'); }
+      if(!confirm(`This will overwrite current data with ${entries.length} entries from the backup (dated ${parsed.exportedAt ? new Date(parsed.exportedAt).toLocaleString('en-GB') : 'unknown'}). Continue?`)) return;
+      entries.forEach(([k,v])=>{ LS.set(k, v); });
+      if(status) status.textContent = `✅ Imported ${entries.length} entries. Reloading…`;
+      setTimeout(()=>location.reload(), 800);
+    }catch(err){
+      if(status) status.textContent = `❌ Import failed: ${err.message}`;
+      alert('Could not read this backup file. Make sure it\'s a JSON file exported from this app.');
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
 }
 </script>
 </body>
