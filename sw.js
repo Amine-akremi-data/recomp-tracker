@@ -1,5 +1,5 @@
 // Bump this on every deploy so the SW updates the cache
-const CACHE_NAME = 'recomp-tracker-v2';
+const CACHE_NAME = 'recomp-tracker-v3';
 
 const APP_SHELL = [
   './',
